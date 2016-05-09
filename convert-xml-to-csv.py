@@ -44,13 +44,13 @@ class Stackoverflow(object):
             writer.writerow(self.header)
             
             parser = etree.iterparse(self.xml_file)
-            for event, row in parser:
-                if row.tag=='row':
-                    row_content = (row.attrib.get(attribute, '') for attribute in self.header)
+            for event, element in parser:
+                if element.tag=='row':
+                    row_content = (element.attrib.get(attribute, '') for attribute in self.header)
                     writer.writerow([unicode(x).encode('utf-8') for x in row_content])
-                row.clear()
-                while row.getprevious() is not None:
-                    del row.getparent()[0]
+                element.clear()
+                while element.getprevious() is not None:
+                    del element.getparent()[0]
             del parser
     
 if __name__=='__main__':
