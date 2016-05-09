@@ -25,14 +25,14 @@ convert_dict = {
     'PostLinks': False, 
     'Tags': False, 
     'Users': False,
-    'Votes': True
+    'Votes': False
 } #Set to True if convert xml to csv 
 
 class Stackoverflow(object):
     def __init__(self, file_name):
         self.file_name = file_name
         self.xml_file = os.path.join(repository, str(self)+'.xml')
-        self.csv_file = os.path.join(repository, str(self)+'_.csv')
+        self.csv_file = os.path.join(repository, str(self)+'.csv')
         self.header = header_dict[str(self)]
         
     def __str__(self):
