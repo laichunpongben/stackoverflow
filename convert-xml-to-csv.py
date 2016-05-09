@@ -9,10 +9,10 @@ repository = r'E:\stackoverflow' #Your repository
 file_names = ['Badges', 'Comments', 'Posts', 'PostLinks', 'Tags', 'Users', 'Votes']
 header_dict = {
     'Badges': ('Id', 'UserId', 'Name', 'Date', 'Class', 'TagBased'),
-    'Comments': ('Id', 'PostId', 'Score', 'TextLength', 'CreationDate', 'UserId'),
-    'Posts': ('Id', 'PostTypeId', 'ParentId', 'AcceptedAnswerId', 'CreationDate', 'Score', 'ViewCount', 'BodyLength', 'OwnerUserId', 
+    'Comments': ('Id', 'PostId', 'Score', 'Text', 'CreationDate', 'UserId'),
+    'Posts': ('Id', 'PostTypeId', 'ParentId', 'AcceptedAnswerId', 'CreationDate', 'Score', 'ViewCount', 'Body', 'OwnerUserId', 
                 'LastEditorUserId', 'LastEditorDisplayName', 'LastEditorDisplayName', 'LastEditDate', 'LastActivityDate', 'CommunityOwnedDate', 'ClosedDate', 
-                'TitleLength', 'Tags', 'AnswerCount', 'CommentCount', 'FavoriteCount'),
+                'Title', 'Tags', 'AnswerCount', 'CommentCount', 'FavoriteCount'),
     'PostLinks': ('Id', 'CreationDate', 'PostId', 'RelatedPostId', 'LinkTypeId'),
     'Tags': ('Id', 'TagName', 'Count', 'ExcerptPostId', 'WikiPostId'),
     'Users': ('Id', 'Reputation', 'CreationDate', 'DisplayName', 'LastAccessDate', 'WebSiteUrl', 'Location', 'Age', 'Views', 'UpVotes', 'DownVotes'),
